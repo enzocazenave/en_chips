@@ -31,7 +31,7 @@ Citizen.CreateThread(function()
 		if distance <= Config.DrawDistance then
 			DrawMarker(Config.Marker.type, Config.Coords.x, Config.Coords.y, Config.Coords.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 2.0, 2.0, 1.0, Config.Marker.color.r, Config.Marker.color.g, Config.Marker.color.b, 100, false, true, 2, true, false, false, false)
 		
-			if distance < 2.0 then
+			if distance <= 2.0 then
 				if IsControlJustPressed(0, Config.OpenMenuKey) then
 					-- OPEN UI
 				end
