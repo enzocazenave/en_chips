@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/8bb0facd32.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="coins-container">
+        <h1 class="coins-container__title">DIAMOND CASINO</h1>
+        <button class="coins-container__actions" id="purchase-redirect"><i class="fas fa-coins"></i> Comprar</button>
+        <button class="coins-container__actions" id="sale-redirect"><i class="fas fa-coins"></i> Vender</button>
+        <p class="coins-container__legend">Pulsa ESC para cerrar menú</p>
+    </div>
+
+    <div class="purchase-container">
+        <button class="return-button"><i class="fas fa-arrow-alt-circle-left"></i></button>
+        <h1 class="purchase-container__title">Comprar fichas</h1>
+        <button class="purchase-container__actions"><i class="fas fa-coins"></i> 1000</button>
+        <button class="purchase-container__actions"><i class="fas fa-coins"></i> 15000</button>
+        <button class="purchase-container__actions"><i class="fas fa-coins"></i> 25000</button>
+        <button class="purchase-container__actions"><i class="fas fa-coins"></i> 35000</button>
+        <p class="purchase-container__modified-title">Selecciona una cantidad exacta</p>
+        <i class="fas fa-arrow-alt-circle-down"></i>
+        <input id="modified-qtty" type="number" class="purchase-container__modified-qtty" placeholder="Cantidad de fichas">
+        <button id="confirm-transaction" class="purchase-container__modified-button">Comprar</button>
+    </div>
+
+    <div class="sale-container">
+        <button class="return-button-sale"><i class="fas fa-arrow-alt-circle-left"></i></button>
+        <h1 class="sale-container__title">Vender fichas</h1>
+        <button class="sale-container__actions"><i class="fas fa-coins"></i> 1000</button>
+        <button class="sale-container__actions"><i class="fas fa-coins"></i> 15000</button>
+        <button class="sale-container__actions"><i class="fas fa-coins"></i> 25000</button>
+        <button class="sale-container__actions"><i class="fas fa-coins"></i> 35000</button>
+        <p class="sale-container__modified-title">Selecciona una cantidad exacta</p>
+        <i class="fas fa-arrow-alt-circle-down"></i>
+        <input id="modified-qtty-sale" type="number" class="sale-container__modified-qtty" placeholder="Cantidad de fichas">
+        <button id="confirm-transaction-sale" class="sale-container__modified-button">Vender</button>
+    </div>
+
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="script.js"></script>
 </body>
 </html>

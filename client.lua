@@ -41,3 +41,7 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
+
+RegisterCommand('activarnui', function()
+	SetNuiFocus(true, true)
+end)

@@ -16,7 +16,7 @@ AddEventHandler("en_chips:giveOrPay", function(type, qtty)
         local chipsQtty = xPlayer.getInventoryItem(item).count
 
         if qtty >= chipsQtty then
-            local money = qtty * Config.SalePrice
+            local moneyToPay = qtty * Config.SalePrice
 
             xPlayer.removeInventoryItem(item, qtty)
             xPlayer.addMoney(moneyToPay)

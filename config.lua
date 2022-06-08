@@ -22,3 +22,5 @@ Config.Coords = {
 Config.ItemName = "chips"
 Config.PurchasePrice = 1 -- PRICE OF CHIPS WHEN A USER BUY CHIPS IN THE UI
 Config.SalePrice = 1 -- PRICE OF CHIPS WHEN A USER SELL CHIPS IN THE UI
+
+--Config.DefaultValues = [1000, 15000, 25000, 35000]

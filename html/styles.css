@@ -1,20 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Overpass+Mono&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Loto', sans-serif;
 }
 
-body {
-    background: url("background.jpeg");
-}
-
-.container {
-    width: 800px;
-    height: 600px;
+.coins-container, .purchase-container, .sale-container {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: rgba(19, 19, 19, 0.8);
-    border-radius: 15px;
+    width: auto;
+    background-color: rgb(40,40,40);
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
 }
+
+.coins-container__legend {
+    margin-top: 10px;
+    color: rgb(186, 37, 124);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.coins-container__title, .purchase-container__title, .sale-container__title {
+    color: rgb(186, 37, 124);
+    border-bottom: 2px solid rgb(186, 37, 124);
+    display: inline-block;
+}
+
+.coins-container__actions, .purchase-container__actions, .purchase-container__modified-button, .sale-container__actions, .sale-container__modified-button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(186, 37, 124);
+    color: #000;
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    font-weight: 900;
+}
+
+.coins-container__actions:hover, .purchase-container__actions:hover, .purchase-container__modified-button:hover, .sale-container__actions:hover, .sale-container__modified-button:hover {
+    background-color: rgb(178, 53, 126);
+    cursor: pointer;
+    transition: all .3s;   
+}
+
+.purchase-container__modified-title, .sale-container__modified-title {
+    margin-top: 10px;
+    color: rgb(186, 37, 124);
+    font-weight: 600;
+}
+
+.purchase-container__modified-qtty, .sale-container__modified-qtty {
+    width: 100%;
+    background-color: rgb(50,50,50);
+    border: none;
+    outline: none;
+    padding: 5px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.purchase-container > i, .sale-container > i {
+    color: rgb(186, 37, 124);
+    margin-top: 10px
+}
+
+.purchase-container__actions > i, .sale-container__actions > i {
+    color: #000;
+}
+
+.return-button, .return-button-sale {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 9px;
+    background-color: rgb(186, 37, 124);
+    color: #000;
+    margin: 10px 0 10px 0;
+    display: inline-block;
+    font-weight: 900;
+}
+
+.return-button:hover, .return-button-sale:hover {
+    background-color: rgb(178, 53, 126);
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] { -moz-appearance:textfield; }
