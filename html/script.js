@@ -1,3 +1,4 @@
+$(".coins-container").hide()
 $(".purchase-container").hide()
 $(".sale-container").hide()
 $("#confirm-transaction").hide()
@@ -41,4 +42,53 @@ $("#purchase-redirect").click(function() {
 $("#sale-redirect").click(function() {
     $(".coins-container").fadeOut(200);
     $(".sale-container").fadeIn(200);
+});
+
+var panelIsOpen = false
+
+window.addEventListener('message', function(event) {
+    var data = event.data;
+    if (data.type == 'container') {
+        if (data.show) {
+            $(".coins-container").show('slow');
+            panelIsOpen = true
+        } else {
+            $(".coins-container").hide('slow');
+            $(".purchase-container").hide('slow');
+            $(".sale-container").hide('slow');
+            panelIsOpen = false
+        } 
+    }
+});
+
+$(document).keyup(function(e) {
+    if (panelIsOpen) {
+        if (e.key == "Escape") {
+            $.post("http://en_chips/closeNui", JSON.stringify({}));
+        }
+    }
+})
+
+function action(type, qtty) {
+    $.post("http://en_chips/executeAction", JSON.stringify({type: type, qtty: qtty}));
+}
+
+$("#confirm-transaction").click(function() {
+    var value = $("#modified-qtty").val()
+    
+    if ((value > 0 && value != "") && !value.includes("e", 0) && !value.includes("E", 0)) {
+        $.post("http://en_chips/executeAction", JSON.stringify({type: "purchase", qtty: value}));
+    } else {
+        $.post("http://en_chips/notify", JSON.stringify({text: "Debes ingresar un valor numerico"}));
+    }
+});
+
+$("#confirm-transaction-sale").click(function() {
+    var value = $("#modified-qtty-sale").val()
+    
+    if ((value > 0 && value != "") && !value.includes("e", 0) && !value.includes("E", 0)) {
+        $.post("http://en_chips/executeAction", JSON.stringify({type: "sale", qtty: value}));
+    } else {
+        $.post("http://en_chips/notify", JSON.stringify({text: "Debes ingresar un valor numerico"}));
+    }
 });

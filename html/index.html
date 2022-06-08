@@ -15,10 +15,10 @@
     <div class="purchase-container">
         <button class="return-button"><i class="fas fa-arrow-alt-circle-left"></i></button>
         <h1 class="purchase-container__title">Comprar fichas</h1>
-        <button class="purchase-container__actions"><i class="fas fa-coins"></i> 1000</button>
-        <button class="purchase-container__actions"><i class="fas fa-coins"></i> 15000</button>
-        <button class="purchase-container__actions"><i class="fas fa-coins"></i> 25000</button>
-        <button class="purchase-container__actions"><i class="fas fa-coins"></i> 35000</button>
+        <button onclick="action('purchase', 1000)" class="purchase-container__actions"><i class="fas fa-coins"></i> 1000</button>
+        <button onclick="action('purchase', 15000)" class="purchase-container__actions"><i class="fas fa-coins"></i> 15000</button>
+        <button onclick="action('purchase', 25000)" class="purchase-container__actions"><i class="fas fa-coins"></i> 25000</button>
+        <button onclick="action('purchase', 35000)" class="purchase-container__actions"><i class="fas fa-coins"></i> 35000</button>
         <p class="purchase-container__modified-title">Selecciona una cantidad exacta</p>
         <i class="fas fa-arrow-alt-circle-down"></i>
         <input id="modified-qtty" type="number" class="purchase-container__modified-qtty" placeholder="Cantidad de fichas">
@@ -28,10 +28,10 @@
     <div class="sale-container">
         <button class="return-button-sale"><i class="fas fa-arrow-alt-circle-left"></i></button>
         <h1 class="sale-container__title">Vender fichas</h1>
-        <button class="sale-container__actions"><i class="fas fa-coins"></i> 1000</button>
-        <button class="sale-container__actions"><i class="fas fa-coins"></i> 15000</button>
-        <button class="sale-container__actions"><i class="fas fa-coins"></i> 25000</button>
-        <button class="sale-container__actions"><i class="fas fa-coins"></i> 35000</button>
+        <button onclick="action('sale', 1000)" class="sale-container__actions"><i class="fas fa-coins"></i> 1000</button>
+        <button onclick="action('sale', 15000)" class="sale-container__actions"><i class="fas fa-coins"></i> 15000</button>
+        <button onclick="action('sale', 25000)" class="sale-container__actions"><i class="fas fa-coins"></i> 25000</button>
+        <button onclick="action('sale', 35000)" class="sale-container__actions"><i class="fas fa-coins"></i> 35000</button>
         <p class="sale-container__modified-title">Selecciona una cantidad exacta</p>
         <i class="fas fa-arrow-alt-circle-down"></i>
         <input id="modified-qtty-sale" type="number" class="sale-container__modified-qtty" placeholder="Cantidad de fichas">
