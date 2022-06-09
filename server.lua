@@ -30,7 +30,6 @@ AddEventHandler("en_chips:giveOrPay", function(type, qtty)
                 layout = "centerRight"
             })
         else
-            -- GONNA NOTIFY NOT ENOUGH CHIPS
             TriggerClientEvent("en_notify:SendNotification", xPlayer.source, {
                 text = 'No tienes esa cantidad de fichas',
                 type = "info",
