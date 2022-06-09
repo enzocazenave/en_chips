@@ -4,7 +4,6 @@ description 'It is a user interface where you can buy and sell casino coins in F
 author 'Enzo Cazenave (Chiki#4155)'
 
 server_scripts {
-	'@mysql-async/lib/MySQL.lua',
     "config.lua",
     "server.lua"
 }
