@@ -45,7 +45,7 @@ Citizen.CreateThread(function()
 				end
 			end
 		else
-			sleep = 500
+			sleep = 1000
 		end
 	end
 end)
